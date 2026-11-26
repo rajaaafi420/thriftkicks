@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="color-scheme" content="light dark" />
-<meta name="description" content="Thrift Kicks — saaf suthray branded thrift shoes Rs 2,199 se shuru, free delivery all over Pakistan. Offer: Rs 2,199 wale koi se 2 pair sirf Rs 4,100. Nike, Adidas, Fila, Under Armour, Hush Puppies, H&M & more. Order on WhatsApp 0323 1520318." />
+<meta name="description" content="Thrift Kicks — saaf suthray branded thrift shoes Rs 2,199 se shuru, free delivery all over Pakistan. Offer: Rs 2,199 wale koi se 2 pair Rs 4,400 ki jagah sirf Rs 4,000 (9% OFF). Nike, Adidas, Fila, Under Armour, Hush Puppies, H&M & more. Order on WhatsApp 0323 1520318." />
 <link rel="icon" href="data:," />
 <title>Thrift Kicks — Saaf Suthray Branded Joote</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +41,7 @@
     }
   }
   *{box-sizing:border-box}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;scroll-padding-bottom:110px}
   body{margin:0;font-family:"Plus Jakarta Sans",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased}
   a{color:inherit}
   img{display:block;max-width:100%}
@@ -131,7 +131,7 @@
   .price-row span{font-size:13px;color:var(--muted);display:block}
   .price-now{font-family:"Archivo",sans-serif;font-weight:900;font-size:24px !important;letter-spacing:-.02em;color:var(--accent);line-height:1.1}
   .price-was{font-family:"Archivo",sans-serif;font-weight:700;font-size:16px;color:var(--muted);text-decoration:line-through;margin-right:6px}
-  .off-badge{background:var(--accent);color:#fff;font-size:12px;font-weight:900;padding:4px 9px;border-radius:999px;white-space:nowrap}
+  .off-badge{display:inline-block;vertical-align:middle;background:var(--accent);color:#fff;font-family:"Archivo",sans-serif;font-weight:900;font-size:12px;letter-spacing:.04em;padding:4px 8px;border-radius:999px;margin-left:8px;line-height:1}
   .price-now small{font-size:13px;font-weight:700;color:var(--muted);letter-spacing:0}
   /* Price strip (hero) */
   .price-strip{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
@@ -195,11 +195,29 @@
   .mini-bar span{font-size:13.5px;opacity:.9}
   .mini-bar a{background:#16A34A;color:#fff;text-decoration:none;font-weight:800;font-size:13.5px;padding:9px 13px;border-radius:999px;white-space:nowrap}
   .mini-price{max-width:1120px;margin:0 auto;padding:10px 16px 0;display:flex;flex-wrap:wrap;gap:8px}
-  .mini-price span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 11px;font-size:13px;font-weight:800}
+  .mini-price>span{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 11px;font-size:13px;font-weight:800}
   .mini-price span b{color:var(--accent)}
+  @media(max-width:640px){
+    .topbar-in{padding:8px 16px}
+    .mini-top{padding-top:8px}
+    .mini-bar{padding:9px 12px}
+    .mini-price{padding-top:6px}
+    .section{padding:20px 16px}
+    #shop{padding-top:14px}
+    .section-head{margin-bottom:6px}
+    .filters{margin:8px 0 12px;gap:6px}
+    .sticky-wa a{padding:11px 14px}
+  }
   .card.featured{border:2px solid var(--accent);box-shadow:0 14px 34px rgba(255,77,13,.18)}
   .af1-badge{position:absolute;top:10px;right:10px;background:var(--accent);color:#fff;font-size:12px;font-weight:900;padding:7px 10px;border-radius:999px}
   .empty{border:1px dashed var(--line);border-radius:16px;padding:18px;text-align:center;color:var(--muted);background:var(--card)}
+  /* Premium combo card */
+  .combo-photos{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:#111}
+  .combo-photos figure{margin:0;position:relative;overflow:hidden}
+  .combo-photos img{width:100%;height:100%;aspect-ratio:5/4;object-fit:cover;cursor:zoom-in}
+  .combo-photos figcaption{position:absolute;left:0;right:0;bottom:0;background:rgba(0,0,0,.68);color:#fff;font-size:12px;font-weight:800;padding:6px 9px;line-height:1.3}
+  .combo-note{background:var(--chip);border:1px dashed var(--accent);border-radius:12px;padding:10px 12px;font-size:13.5px;font-weight:700;color:var(--ink)}
+  .combo-note b{color:var(--accent)}
 </style>
 </head>
 <body>
@@ -224,7 +242,7 @@
   </section>
   <div class="mini-price" aria-label="Prices">
     <span>Zyada tar pairs <b>Rs 2,199</b></span>
-    <span>2 pair <b>Rs 4,100</b></span>
+    <span>2 pair <s>Rs 4,400</s> <b>Rs 4,000</b> <span class="off-badge">9% OFF</span></span>
     <span><b>Free Delivery</b> - All Pakistan</span>
     <span>WhatsApp <b>0323 1520318</b></span>
   </div>
@@ -280,23 +298,52 @@
         </div>
       </article>
 
+      <!-- PREMIUM COMBO: GAZELLE BLACK + AF1 -->
+      <article class="card featured" data-brand="nike" data-offer="1">
+        <div class="gallery-main">
+          <div class="combo-photos">
+            <figure>
+              <img class="main-img" src="https://i.postimg.cc/zvsgnw5L/gazelle-main.jpg" alt="Adidas Gazelle — Black — combo photo" data-caption="Premium Combo — Adidas Gazelle Black — US 10 · UK 9.5 · EUR 44" tabindex="0" loading="lazy" />
+              <figcaption>Adidas Gazelle — Black</figcaption>
+            </figure>
+            <figure>
+              <img class="main-img" src="https://i.postimg.cc/L5YPYQdR/af1-main.jpg" alt="Nike Air Force 1 — White (Gum Sole) — combo photo" data-caption="Premium Combo — Nike Air Force 1 — koi bhi size: US 8.5, US 11, US 8, US 6Y" tabindex="0" loading="lazy" />
+              <figcaption>Nike Air Force 1 — White</figcaption>
+            </figure>
+          </div>
+          <span class="tag clean">✓ CLEAN CONDITION</span><span class="af1-badge">PREMIUM COMBO</span>
+        </div>
+        <div class="card-body">
+          <div class="card-top">
+            <div><p class="brandline">Premium Combo • Adidas + Nike</p><h3>Premium Combo — Gazelle Black + Air Force 1</h3></div>
+            <div class="size-badge"><small>Offer</small>2 Pair Bundle</div>
+          </div>
+          <p class="desc">Dono premium pairs ek saath, ek hi deal mein: <strong>Adidas Gazelle Black</strong> aur <strong>Nike Air Force 1 — koi bhi size</strong> jo available ho. Alag alag lein to Rs 4,299 + Rs 4,299 = Rs 8,598 banta hai — combo mein sirf <strong>Rs 8,500</strong>.</p>
+          <div class="specs"><span>Gazelle: US 10 · UK 9.5 · EUR 44</span><span>AF1 sizes: US 8.5 · US 11 · US 8 · US 6Y</span><span>Condition: Clean / Good</span></div>
+          <p class="combo-note"><b>Note:</b> Ye combo ek alag offer hai — is par standard 2-pair wala <b>Rs 4,000 bundle nahi lagta</b>. Combo ki price fix Rs 8,500 hai.</p>
+          <div class="price-row">
+            <div><s class="price-was">Rs 15,000</s><b class="price-now">Rs 8,500</b><span class="off-badge">43% OFF</span><span>Free delivery — All Pakistan</span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Premium%20Combo%3A%20Adidas%20Gazelle%20Black%20%2B%20Nike%20Air%20Force%201%20chahiye.%20AF1%20ka%20size%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+          </div>
+        </div>
+      </article>
 
       <!-- ADIDAS -->
       <article class="card" data-brand="adidas">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/bJLgHBFj/adidas-main.jpg" alt="Adidas Sleek white sneakers, front view" data-caption="Adidas Sleek White — Size 8" tabindex="0" />
+          <img class="main-img" src="https://i.postimg.cc/bJLgHBFj/adidas-main.jpg" alt="Adidas Sleek white sneakers, front view" data-caption="Adidas Sleek White — US 8 · UK 7.5 · EUR 41.5" tabindex="0" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Adidas • Originals</p><h3>Adidas Sleek — White</h3></div>
-            <div class="size-badge"><small>Size</small>8</div>
+            <div class="size-badge"><small>Size</small>US 8 · UK 7.5 · EUR 41.5</div>
           </div>
           <p class="desc">Safed leather sneakers, rozana pehenne aur casual style ke liye best. Saaf suthra pair, laces aur sole dono achi haalat mein. Studio wali photo mein jo dikh raha hai, bilkul wahi pair hai.</p>
           <div class="specs"><span>Color: White / Black heel</span><span>Style: Low-top sneakers</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Adidas%20Sleek%20White%20Size%208%20chahiye.%20Is%20ki%20price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Adidas%20Sleek%20White%20Size%20US%208%20%C2%B7%20UK%207.5%20%C2%B7%20EUR%2041.5%20chahiye.%20Is%20ki%20price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
@@ -304,7 +351,7 @@
       <!-- ASICS -->
       <article class="card" data-brand="asics">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/cCpnQ7ZZ/asics-main.jpg" alt="Asics Classic white sneakers with navy and red stripes, top view" data-caption="Asics Classic — US 7 / EU 40" tabindex="0" />
+          <img class="main-img" src="https://i.postimg.cc/cCpnQ7ZZ/asics-main.jpg" alt="Asics Classic white sneakers with navy and red stripes, top view" data-caption="Asics Classic — US 7 · UK 6.5 · EUR 40" tabindex="0" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="Asics photos">
@@ -316,13 +363,13 @@
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Asics • Classic</p><h3>Asics Classic — White / Navy / Red</h3></div>
-            <div class="size-badge"><small>Size</small>US 7 · EU 40</div>
+            <div class="size-badge"><small>Size</small>US 7 · UK 6.5 · EUR 40</div>
           </div>
-          <p class="desc">Classic Asics design, safed upper ke saath navy aur red stripes. Andar ke label par size saaf likha hai: <strong>US 7 / EURO 40 / 25.25 cm</strong>, synthetic leather upper, rubber sole. Made in Cambodia.</p>
+          <p class="desc">Classic Asics design, safed upper ke saath navy aur red stripes. Andar ke label par size saaf likha hai: <strong>US 7 / UK 6.5 / EUR 40 / 25.25 cm</strong>, synthetic leather upper, rubber sole. Made in Cambodia.</p>
           <div class="specs"><span>25.25 cm</span><span>Synthetic leather upper</span><span>Rubber sole</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Asics%20Classic%20White%20US%207%20%2F%20EU%2040%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Asics%20Classic%20White%20Size%20US%207%20%C2%B7%20UK%206.5%20%C2%B7%20EUR%2040%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
@@ -330,7 +377,7 @@
       <!-- H&M -->
       <article class="card" data-brand="hm">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/43x1PTjz/hm-main.jpg" alt="H&M white sneakers pair, top view showing H&M 42 inside" data-caption="H&M White Sneakers — EU 42" tabindex="0" />
+          <img class="main-img" src="https://i.postimg.cc/43x1PTjz/hm-main.jpg" alt="H&M white sneakers pair, top view showing H&M 42 inside" data-caption="H&M White Sneakers — US 8.5 · UK 8 · EUR 42" tabindex="0" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="H&M photos">
@@ -342,13 +389,13 @@
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">H&amp;M</p><h3>H&amp;M White Sneakers — Black Heel</h3></div>
-            <div class="size-badge"><small>Size</small>EU 42</div>
+            <div class="size-badge"><small>Size</small>US 8.5 · UK 8 · EUR 42</div>
           </div>
           <p class="desc">Simple, saaf safed sneakers — har dress ke saath chalte hain. Andar H&amp;M 42 aur sole par bhi 42 saaf nazar aata hai. Halka aur comfortable, daily use ke liye.</p>
-          <div class="specs"><span>Color: White / Black heel</span><span>EU 42</span><span>Gum sole</span><span>Condition: Clean / Good</span></div>
+          <div class="specs"><span>Color: White / Black heel</span><span>US 8.5 · UK 8 · EUR 42</span><span>Gum sole</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20H%26M%20White%20Sneakers%20EU%2042%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20H%26M%20White%20Sneakers%20Size%20US%208.5%20%C2%B7%20UK%208%20%C2%B7%20EUR%2042%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
@@ -356,7 +403,7 @@
       <!-- UNDER ARMOUR -->
       <article class="card" data-brand="ua">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/dV42LxD0/ua-main.jpg" alt="Under Armour black Micro G running shoe, side view" data-caption="Under Armour Micro G Black — Size 9" tabindex="0" />
+          <img class="main-img" src="https://i.postimg.cc/dV42LxD0/ua-main.jpg" alt="Under Armour black Micro G running shoe, side view" data-caption="Under Armour Micro G Black — US 9 · UK 8 · EUR 42.5" tabindex="0" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="Under Armour photos">
@@ -367,113 +414,113 @@
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Under Armour • Micro G</p><h3>Under Armour Micro G — Black</h3></div>
-            <div class="size-badge"><small>Size</small>9</div>
+            <div class="size-badge"><small>Size</small>US 9 · UK 8 · EUR 42.5</div>
           </div>
           <p class="desc">Kaala running / training shoe, Micro G sole ke saath. Walk, gym aur daily bhaag daur ke liye mazboot grip. Side par Under Armour ka logo saaf nazar aata hai, sole ki haalat photo mein wazeh hai.</p>
           <div class="specs"><span>Color: Black / White sole</span><span>Micro G sole</span><span>Running / Training</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Under%20Armour%20Micro%20G%20Black%20Size%209%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Under%20Armour%20Micro%20G%20Black%20Size%20US%209%20%C2%B7%20UK%208%20%C2%B7%20EUR%2042.5%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="polo">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/8ztRj0sT/polo-main.jpg" alt="U.S. Polo Assn Berkeley — White — main photo" data-caption="U.S. Polo Assn Berkeley — White — EU 39 · US 7.5" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/8ztRj0sT/polo-main.jpg" alt="U.S. Polo Assn Berkeley — White — main photo" data-caption="U.S. Polo Assn Berkeley — White — US 7.5 · UK 7 · EUR 39" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="U.S. Polo Assn Berkeley — White photos"><button class="thumb active" data-src="https://i.postimg.cc/8ztRj0sT/polo-main.jpg" data-alt="U.S. Polo Assn Berkeley — White — photo 1"><img src="https://i.postimg.cc/8ztRj0sT/polo-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/K8Db6CQN/polo-1.jpg" data-alt="U.S. Polo Assn Berkeley — White — photo 2"><img src="https://i.postimg.cc/K8Db6CQN/polo-1.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/BnB3rRNp/polo-2.jpg" data-alt="U.S. Polo Assn Berkeley — White — photo 3"><img src="https://i.postimg.cc/BnB3rRNp/polo-2.jpg" alt="" /></button><span class="thumb-label">3 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">U.S. Polo Assn • Berkeley</p><h3>U.S. Polo Assn Berkeley — White</h3></div>
-            <div class="size-badge"><small>Size</small>EU 39 · US 7.5</div>
+            <div class="size-badge"><small>Size</small>US 7.5 · UK 7 · EUR 39</div>
           </div>
           <p class="desc">Safed leather sneakers, side par U.S. Polo Assn ka mashhoor logo aur navy/red stripe. Rozana pehenne ke liye saaf suthra, comfortable pair.</p>
           <div class="specs"><span>Color: White</span><span>Leather upper</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20U.S.%20Polo%20Assn%20Berkeley%20%E2%80%94%20White%20Size%20EU%2039%20%C2%B7%20US%207.5%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20U.S.%20Polo%20Assn%20Berkeley%20%E2%80%94%20White%20Size%20US%207.5%20%C2%B7%20UK%207%20%C2%B7%20EUR%2039%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="fila">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/vTJVW7MB/fila-chunky-main.jpg" alt="Fila Chunky — White / Blue / Pink — main photo" data-caption="Fila Chunky — White / Blue / Pink — EU 41" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/vTJVW7MB/fila-chunky-main.jpg" alt="Fila Chunky — White / Blue / Pink — main photo" data-caption="Fila Chunky — White / Blue / Pink — US 8 · UK 7.5 · EUR 41" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="Fila Chunky — White / Blue / Pink photos"><button class="thumb active" data-src="https://i.postimg.cc/vTJVW7MB/fila-chunky-main.jpg" data-alt="Fila Chunky — White / Blue / Pink — photo 1"><img src="https://i.postimg.cc/vTJVW7MB/fila-chunky-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/6QtSC3rf/fila-chunky-1.jpg" data-alt="Fila Chunky — White / Blue / Pink — photo 2"><img src="https://i.postimg.cc/6QtSC3rf/fila-chunky-1.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/8CN3L5Ry/fila-chunky-2.jpg" data-alt="Fila Chunky — White / Blue / Pink — photo 3"><img src="https://i.postimg.cc/8CN3L5Ry/fila-chunky-2.jpg" alt="" /></button><span class="thumb-label">3 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Fila • Chunky</p><h3>Fila Chunky — White / Blue / Pink</h3></div>
-            <div class="size-badge"><small>Size</small>EU 41</div>
+            <div class="size-badge"><small>Size</small>US 8 · UK 7.5 · EUR 41</div>
           </div>
           <p class="desc">Chunky style sneakers, safed upper ke saath halka blue aur pink touch — FILA side par saaf nazar aata hai. Fashion aur daily wear dono ke liye zabardast pair.</p>
           <div class="specs"><span>Color: White / Blue / Pink</span><span>Chunky sole</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Fila%20Chunky%20%E2%80%94%20White%20/%20Blue%20/%20Pink%20Size%20EU%2041%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Fila%20Chunky%20%E2%80%94%20White%20/%20Blue%20/%20Pink%20Size%20US%208%20%C2%B7%20UK%207.5%20%C2%B7%20EUR%2041%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="hush">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/zfGk714W/hush-main.jpg" alt="Hush Puppies — Beige — main photo" data-caption="Hush Puppies — Beige — US 10" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/zfGk714W/hush-main.jpg" alt="Hush Puppies — Beige — main photo" data-caption="Hush Puppies — Beige — US 10 · UK 9.5 · EUR 44" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="Hush Puppies — Beige photos"><button class="thumb active" data-src="https://i.postimg.cc/zfGk714W/hush-main.jpg" data-alt="Hush Puppies — Beige — photo 1"><img src="https://i.postimg.cc/zfGk714W/hush-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/Pqy7yjyM/hush-1.jpg" data-alt="Hush Puppies — Beige — photo 2"><img src="https://i.postimg.cc/Pqy7yjyM/hush-1.jpg" alt="" /></button><span class="thumb-label">2 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Hush Puppies</p><h3>Hush Puppies — Beige</h3></div>
-            <div class="size-badge"><small>Size</small>US 10</div>
+            <div class="size-badge"><small>Size</small>US 10 · UK 9.5 · EUR 44</div>
           </div>
           <p class="desc">Halke beige / cream rang ke comfortable sneakers. Soft aur halka design, lambi walk aur rozana istemal ke liye best.</p>
           <div class="specs"><span>Color: Beige / Cream</span><span>Comfort style</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Hush%20Puppies%20%E2%80%94%20Beige%20Size%20US%2010%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Hush%20Puppies%20%E2%80%94%20Beige%20Size%20US%2010%20%C2%B7%20UK%209.5%20%C2%B7%20EUR%2044%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="nike">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/mg8Yt5hR/nike-flex-knit-main.jpg" alt="Nike Flex — Black Knit — main photo" data-caption="Nike Flex — Black Knit — US 8.5 · EU 42" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/mg8Yt5hR/nike-flex-knit-main.jpg" alt="Nike Flex — Black Knit — main photo" data-caption="Nike Flex — Black Knit — US 8.5 · UK 7.5 · EUR 42" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="Nike Flex — Black Knit photos"><button class="thumb active" data-src="https://i.postimg.cc/mg8Yt5hR/nike-flex-knit-main.jpg" data-alt="Nike Flex — Black Knit — photo 1"><img src="https://i.postimg.cc/mg8Yt5hR/nike-flex-knit-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/Hk9mqF3w/nike-flex-knit-1.jpg" data-alt="Nike Flex — Black Knit — photo 2"><img src="https://i.postimg.cc/Hk9mqF3w/nike-flex-knit-1.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/P5QHg0KQ/nike-flex-knit-2.jpg" data-alt="Nike Flex — Black Knit — photo 3"><img src="https://i.postimg.cc/P5QHg0KQ/nike-flex-knit-2.jpg" alt="" /></button><span class="thumb-label">3 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Nike • Flex Knit</p><h3>Nike Flex — Black Knit</h3></div>
-            <div class="size-badge"><small>Size</small>US 8.5 · EU 42</div>
+            <div class="size-badge"><small>Size</small>US 8.5 · UK 7.5 · EUR 42</div>
           </div>
           <p class="desc">Kaala knit upper, halka aur saans lene wala fabric. Side par white Nike swoosh saaf nazar aata hai. Walk aur running ke liye comfortable pair.</p>
           <div class="specs"><span>Color: Black / Grey knit</span><span>Knit upper</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Nike%20Flex%20%E2%80%94%20Black%20Knit%20Size%20US%208.5%20%C2%B7%20EU%2042%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Nike%20Flex%20%E2%80%94%20Black%20Knit%20Size%20US%208.5%20%C2%B7%20UK%207.5%20%C2%B7%20EUR%2042%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="others">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/BvnCpGRb/george-main.jpg" alt="George Hogg — Black — main photo" data-caption="George Hogg — Black — EU 40" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/BvnCpGRb/george-main.jpg" alt="George Hogg — Black — main photo" data-caption="George Hogg — Black — US 7 · UK 6.5 · EUR 40" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="George Hogg — Black photos"><button class="thumb active" data-src="https://i.postimg.cc/BvnCpGRb/george-main.jpg" data-alt="George Hogg — Black — photo 1"><img src="https://i.postimg.cc/BvnCpGRb/george-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/HLzNzgzw/george-1.jpg" data-alt="George Hogg — Black — photo 2"><img src="https://i.postimg.cc/HLzNzgzw/george-1.jpg" alt="" /></button><span class="thumb-label">2 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">George Hogg</p><h3>George Hogg — Black</h3></div>
-            <div class="size-badge"><small>Size</small>EU 40</div>
+            <div class="size-badge"><small>Size</small>US 7 · UK 6.5 · EUR 40</div>
           </div>
           <p class="desc">Kaale sneakers, simple aur mazboot design. Daily use ke liye saaf suthra pair.</p>
           <div class="specs"><span>Color: Black</span><span>Daily wear</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20George%20Hogg%20%E2%80%94%20Black%20Size%20EU%2040%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20George%20Hogg%20%E2%80%94%20Black%20Size%20US%207%20%C2%B7%20UK%206.5%20%C2%B7%20EUR%2040%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
@@ -542,256 +589,256 @@
 
       <article class="card" data-brand="nike">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/JzPNG2t1/waffle-main.jpg" alt="Nike Waffle Debut — Black — main photo" data-caption="Nike Waffle Debut — Black — US 8 · EU 41" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/JzPNG2t1/waffle-main.jpg" alt="Nike Waffle Debut — Black — main photo" data-caption="Nike Waffle Debut — Black — US 8 · UK 7 · EUR 41" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="Nike Waffle Debut — Black photos"><button class="thumb active" data-src="https://i.postimg.cc/JzPNG2t1/waffle-main.jpg" data-alt="Nike Waffle Debut — Black — photo 1"><img src="https://i.postimg.cc/JzPNG2t1/waffle-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/MTNJ0wKH/waffle-1.jpg" data-alt="Nike Waffle Debut — Black — photo 2"><img src="https://i.postimg.cc/MTNJ0wKH/waffle-1.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/DZH3Qhym/waffle-2.jpg" data-alt="Nike Waffle Debut — Black — photo 3"><img src="https://i.postimg.cc/DZH3Qhym/waffle-2.jpg" alt="" /></button><span class="thumb-label">3 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Nike • Waffle Debut</p><h3>Nike Waffle Debut — Black</h3></div>
-            <div class="size-badge"><small>Size</small>US 8 · EU 41</div>
+            <div class="size-badge"><small>Size</small>US 8 · UK 7 · EUR 41</div>
           </div>
           <p class="desc">Kaala retro style sneaker, bara white swoosh aur waffle sole. Classic look, rozana style ke liye best.</p>
           <div class="specs"><span>Color: Black / White</span><span>Waffle sole</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Nike%20Waffle%20Debut%20%E2%80%94%20Black%20Size%20US%208%20%C2%B7%20EU%2041%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Nike%20Waffle%20Debut%20%E2%80%94%20Black%20Size%20US%208%20%C2%B7%20UK%207%20%C2%B7%20EUR%2041%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="fila">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/WzBkMmjb/fila-black-main.jpg" alt="Fila Mesh — Black — main photo" data-caption="Fila Mesh — Black — US 10" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/WzBkMmjb/fila-black-main.jpg" alt="Fila Mesh — Black — main photo" data-caption="Fila Mesh — Black — US 10 · UK 9.5 · EUR 44" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="Fila Mesh — Black photos"><button class="thumb active" data-src="https://i.postimg.cc/WzBkMmjb/fila-black-main.jpg" data-alt="Fila Mesh — Black — photo 1"><img src="https://i.postimg.cc/WzBkMmjb/fila-black-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/DfMtR7Tp/fila-black-1.jpg" data-alt="Fila Mesh — Black — photo 2"><img src="https://i.postimg.cc/DfMtR7Tp/fila-black-1.jpg" alt="" /></button><span class="thumb-label">2 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Fila</p><h3>Fila Mesh — Black</h3></div>
-            <div class="size-badge"><small>Size</small>US 10</div>
+            <div class="size-badge"><small>Size</small>US 10 · UK 9.5 · EUR 44</div>
           </div>
           <p class="desc">Kaala mesh running shoe, halka aur comfortable. Tongue par FILA saaf nazar aata hai. Walk aur daily use ke liye best.</p>
           <div class="specs"><span>Color: Black</span><span>Mesh upper</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Fila%20Mesh%20%E2%80%94%20Black%20Size%20US%2010%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Fila%20Mesh%20%E2%80%94%20Black%20Size%20US%2010%20%C2%B7%20UK%209.5%20%C2%B7%20EUR%2044%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="others">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/VkDqdV5v/white-leather-main.jpg" alt="White Leather Sneakers — Heel Pattern — main photo" data-caption="White Leather Sneakers — Heel Pattern — US 7" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/VkDqdV5v/white-leather-main.jpg" alt="White Leather Sneakers — Heel Pattern — main photo" data-caption="White Leather Sneakers — Heel Pattern — US 7 · UK 6.5 · EUR 40" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="White Leather Sneakers — Heel Pattern photos"><button class="thumb active" data-src="https://i.postimg.cc/VkDqdV5v/white-leather-main.jpg" data-alt="White Leather Sneakers — Heel Pattern — photo 1"><img src="https://i.postimg.cc/VkDqdV5v/white-leather-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/rm32GTFK/white-leather-1.jpg" data-alt="White Leather Sneakers — Heel Pattern — photo 2"><img src="https://i.postimg.cc/rm32GTFK/white-leather-1.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/wvZY5zTt/white-leather-2.jpg" data-alt="White Leather Sneakers — Heel Pattern — photo 3"><img src="https://i.postimg.cc/wvZY5zTt/white-leather-2.jpg" alt="" /></button><span class="thumb-label">3 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">White Leather</p><h3>White Leather Sneakers — Heel Pattern</h3></div>
-            <div class="size-badge"><small>Size</small>US 7</div>
+            <div class="size-badge"><small>Size</small>US 7 · UK 6.5 · EUR 40</div>
           </div>
           <p class="desc">Safed leather sneakers, heel par khaas black pattern design jo is pair ko alag look deta hai. Saaf suthra, neat pair.</p>
           <div class="specs"><span>Color: White</span><span>Heel pattern design</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20White%20Leather%20Sneakers%20%E2%80%94%20Heel%20Pattern%20Size%20US%207%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20White%20Leather%20Sneakers%20%E2%80%94%20Heel%20Pattern%20Size%20US%207%20%C2%B7%20UK%206.5%20%C2%B7%20EUR%2040%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="belle">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/yxMZFhBV/belle-main.jpg" alt="Belle Chunky — White — main photo" data-caption="Belle Chunky — White — US 9" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/yxMZFhBV/belle-main.jpg" alt="Belle Chunky — White — main photo" data-caption="Belle Chunky — White — US 9 · UK 8.5 · EUR 42.5" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="Belle Chunky — White photos"><button class="thumb active" data-src="https://i.postimg.cc/yxMZFhBV/belle-main.jpg" data-alt="Belle Chunky — White — photo 1"><img src="https://i.postimg.cc/yxMZFhBV/belle-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/SxsYRL5y/belle-1.jpg" data-alt="Belle Chunky — White — photo 2"><img src="https://i.postimg.cc/SxsYRL5y/belle-1.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/9QZ5GKvX/belle-2.jpg" data-alt="Belle Chunky — White — photo 3"><img src="https://i.postimg.cc/9QZ5GKvX/belle-2.jpg" alt="" /></button><span class="thumb-label">3 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Belle • Chunky</p><h3>Belle Chunky — White</h3></div>
-            <div class="size-badge"><small>Size</small>US 9</div>
+            <div class="size-badge"><small>Size</small>US 9 · UK 8.5 · EUR 42.5</div>
           </div>
           <p class="desc">Safed chunky style sneakers, mota sole aur trendy look. Andar Belle ka naam saaf nazar aata hai. Fashion ke liye zabardast pair.</p>
           <div class="specs"><span>Color: White</span><span>Chunky sole</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Belle%20Chunky%20%E2%80%94%20White%20Size%20US%209%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Belle%20Chunky%20%E2%80%94%20White%20Size%20US%209%20%C2%B7%20UK%208.5%20%C2%B7%20EUR%2042.5%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="others">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/6QphcNFZ/hilassy-main.jpg" alt="Hilassy — Black — main photo" data-caption="Hilassy — Black — US 7.5 · EU 42" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/6QphcNFZ/hilassy-main.jpg" alt="Hilassy — Black — main photo" data-caption="Hilassy — Black — US 7.5 · UK 7 · EUR 42" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="Hilassy — Black photos"><button class="thumb active" data-src="https://i.postimg.cc/6QphcNFZ/hilassy-main.jpg" data-alt="Hilassy — Black — photo 1"><img src="https://i.postimg.cc/6QphcNFZ/hilassy-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/HLzNzgz0/hilassy-1.jpg" data-alt="Hilassy — Black — photo 2"><img src="https://i.postimg.cc/HLzNzgz0/hilassy-1.jpg" alt="" /></button><span class="thumb-label">2 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Hilassy</p><h3>Hilassy — Black</h3></div>
-            <div class="size-badge"><small>Size</small>US 7.5 · EU 42</div>
+            <div class="size-badge"><small>Size</small>US 7.5 · UK 7 · EUR 42</div>
           </div>
           <p class="desc">Kaala sports style shoe, white sole ke saath. Mazboot grip, walk aur daily bhaag daur ke liye theek pair.</p>
           <div class="specs"><span>Color: Black / White sole</span><span>Sports style</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Hilassy%20%E2%80%94%20Black%20Size%20US%207.5%20%C2%B7%20EU%2042%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Hilassy%20%E2%80%94%20Black%20Size%20US%207.5%20%C2%B7%20UK%207%20%C2%B7%20EUR%2042%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="adidas">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/zvsgnw5L/gazelle-main.jpg" alt="Adidas Gazelle — Black — main photo" data-caption="Adidas Gazelle — Black — US 10" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/zvsgnw5L/gazelle-main.jpg" alt="Adidas Gazelle — Black — main photo" data-caption="Adidas Gazelle — Black — US 10 · UK 9.5 · EUR 44" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="Adidas Gazelle — Black photos"><button class="thumb active" data-src="https://i.postimg.cc/zvsgnw5L/gazelle-main.jpg" data-alt="Adidas Gazelle — Black — photo 1"><img src="https://i.postimg.cc/zvsgnw5L/gazelle-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/SKk5cs6g/gazelle-1.jpg" data-alt="Adidas Gazelle — Black — photo 2"><img src="https://i.postimg.cc/SKk5cs6g/gazelle-1.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/HLdKbxwZ/gazelle-2.jpg" data-alt="Adidas Gazelle — Black — photo 3"><img src="https://i.postimg.cc/HLdKbxwZ/gazelle-2.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/s2s85XYH/gazelle-3.jpg" data-alt="Adidas Gazelle — Black — photo 4"><img src="https://i.postimg.cc/s2s85XYH/gazelle-3.jpg" alt="" /></button><span class="thumb-label">4 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Adidas • Gazelle</p><h3>Adidas Gazelle — Black</h3></div>
-            <div class="size-badge"><small>Size</small>US 10</div>
+            <div class="size-badge"><small>Size</small>US 10 · UK 9.5 · EUR 44</div>
           </div>
           <p class="desc">Classic Gazelle, kaala leather upper aur side par Adidas ki 3 stripes — side par GAZELLE gold mein saaf likha hai. Har zamane ka mashhoor style.</p>
           <div class="specs"><span>Color: Black</span><span>Leather upper</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
             <div><s class="price-was">Rs 7,500</s><b class="price-now">Rs 4,299</b><span class="off-badge">43% OFF</span><span>Free delivery — All Pakistan</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Adidas%20Gazelle%20%E2%80%94%20Black%20Size%20US%2010%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Adidas%20Gazelle%20%E2%80%94%20Black%20Size%20US%2010%20%C2%B7%20UK%209.5%20%C2%B7%20EUR%2044%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="kappa">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/5t2mgMDC/kappa-main.jpg" alt="Kappa — White / Pink — main photo" data-caption="Kappa — White / Pink — EU 41" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/5t2mgMDC/kappa-main.jpg" alt="Kappa — White / Pink — main photo" data-caption="Kappa — White / Pink — US 8 · UK 7.5 · EUR 41" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="Kappa — White / Pink photos"><button class="thumb active" data-src="https://i.postimg.cc/5t2mgMDC/kappa-main.jpg" data-alt="Kappa — White / Pink — photo 1"><img src="https://i.postimg.cc/5t2mgMDC/kappa-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/zf7Q7r7j/kappa-1.jpg" data-alt="Kappa — White / Pink — photo 2"><img src="https://i.postimg.cc/zf7Q7r7j/kappa-1.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/wB2r2p22/kappa-2.jpg" data-alt="Kappa — White / Pink — photo 3"><img src="https://i.postimg.cc/wB2r2p22/kappa-2.jpg" alt="" /></button><span class="thumb-label">3 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Kappa</p><h3>Kappa — White / Pink</h3></div>
-            <div class="size-badge"><small>Size</small>EU 41</div>
+            <div class="size-badge"><small>Size</small>US 8 · UK 7.5 · EUR 41</div>
           </div>
           <p class="desc">Safed running shoe, side par Kappa ka logo aur halka pink touch. Halka, comfortable, daily wear ke liye best.</p>
           <div class="specs"><span>Color: White / Pink</span><span>Running style</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Kappa%20%E2%80%94%20White%20/%20Pink%20Size%20EU%2041%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Kappa%20%E2%80%94%20White%20/%20Pink%20Size%20US%208%20%C2%B7%20UK%207.5%20%C2%B7%20EUR%2041%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="puma">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/VkDqdV5s/puma-main.jpg" alt="Puma SoftFoam — Grey — main photo" data-caption="Puma SoftFoam — Grey — EU 42 · US 9" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/VkDqdV5s/puma-main.jpg" alt="Puma SoftFoam — Grey — main photo" data-caption="Puma SoftFoam — Grey — US 9 · UK 8 · EUR 42" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="Puma SoftFoam — Grey photos"><button class="thumb active" data-src="https://i.postimg.cc/VkDqdV5s/puma-main.jpg" data-alt="Puma SoftFoam — Grey — photo 1"><img src="https://i.postimg.cc/VkDqdV5s/puma-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/V6pP9wLm/puma-1.jpg" data-alt="Puma SoftFoam — Grey — photo 2"><img src="https://i.postimg.cc/V6pP9wLm/puma-1.jpg" alt="" /></button><span class="thumb-label">2 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Puma • SoftFoam</p><h3>Puma SoftFoam — Grey</h3></div>
-            <div class="size-badge"><small>Size</small>EU 42 · US 9</div>
+            <div class="size-badge"><small>Size</small>US 9 · UK 8 · EUR 42</div>
           </div>
           <p class="desc">Halke grey rang ka running shoe, SoftFoam comfort ke saath. Lambi walk mein bhi paon thakta nahi. Saaf suthra pair.</p>
           <div class="specs"><span>Color: Light Grey</span><span>SoftFoam comfort</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Puma%20SoftFoam%20%E2%80%94%20Grey%20Size%20EU%2042%20%C2%B7%20US%209%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Puma%20SoftFoam%20%E2%80%94%20Grey%20Size%20US%209%20%C2%B7%20UK%208%20%C2%B7%20EUR%2042%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="adidas">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/MTt5bFrp/adidas-gold-main.jpg" alt="Adidas Running — White / Gold — main photo" data-caption="Adidas Running — White / Gold — US 8.5 · EU 42" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/MTt5bFrp/adidas-gold-main.jpg" alt="Adidas Running — White / Gold — main photo" data-caption="Adidas Running — White / Gold — US 8.5 · UK 8 · EUR 42" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="Adidas Running — White / Gold photos"><button class="thumb active" data-src="https://i.postimg.cc/MTt5bFrp/adidas-gold-main.jpg" data-alt="Adidas Running — White / Gold — photo 1"><img src="https://i.postimg.cc/MTt5bFrp/adidas-gold-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/PrK8dV6t/adidas-gold-1.jpg" data-alt="Adidas Running — White / Gold — photo 2"><img src="https://i.postimg.cc/PrK8dV6t/adidas-gold-1.jpg" alt="" /></button><span class="thumb-label">2 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Adidas • Running</p><h3>Adidas Running — White / Gold</h3></div>
-            <div class="size-badge"><small>Size</small>US 8.5 · EU 42</div>
+            <div class="size-badge"><small>Size</small>US 8.5 · UK 8 · EUR 42</div>
           </div>
           <p class="desc">Safed mesh running shoe, golden 3 stripes ke saath. Halka aur stylish — walk, gym aur daily use ke liye best.</p>
           <div class="specs"><span>Color: White / Gold</span><span>Mesh upper</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Adidas%20Running%20%E2%80%94%20White%20/%20Gold%20Size%20US%208.5%20%C2%B7%20EU%2042%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Adidas%20Running%20%E2%80%94%20White%20/%20Gold%20Size%20US%208.5%20%C2%B7%20UK%208%20%C2%B7%20EUR%2042%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="nike">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/KYpDsHyL/nike-flex-black-main.jpg" alt="Nike Flex — Black — main photo" data-caption="Nike Flex — Black — US 8 · EU 41" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/KYpDsHyL/nike-flex-black-main.jpg" alt="Nike Flex — Black — main photo" data-caption="Nike Flex — Black — US 8 · UK 7 · EUR 41" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="Nike Flex — Black photos"><button class="thumb active" data-src="https://i.postimg.cc/KYpDsHyL/nike-flex-black-main.jpg" data-alt="Nike Flex — Black — photo 1"><img src="https://i.postimg.cc/KYpDsHyL/nike-flex-black-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/L83ScGvj/nike-flex-black-1.jpg" data-alt="Nike Flex — Black — photo 2"><img src="https://i.postimg.cc/L83ScGvj/nike-flex-black-1.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/MpmwCgty/nike-flex-black-2.jpg" data-alt="Nike Flex — Black — photo 3"><img src="https://i.postimg.cc/MpmwCgty/nike-flex-black-2.jpg" alt="" /></button><span class="thumb-label">3 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Nike • Flex</p><h3>Nike Flex — Black</h3></div>
-            <div class="size-badge"><small>Size</small>US 8 · EU 41</div>
+            <div class="size-badge"><small>Size</small>US 8 · UK 7 · EUR 41</div>
           </div>
           <p class="desc">Kaala mesh running shoe, white sole ke saath. Andar ke label par size saaf likha hai. Halka aur comfortable pair.</p>
           <div class="specs"><span>Color: Black / White sole</span><span>Mesh upper</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Nike%20Flex%20%E2%80%94%20Black%20Size%20US%208%20%C2%B7%20EU%2041%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Nike%20Flex%20%E2%80%94%20Black%20Size%20US%208%20%C2%B7%20UK%207%20%C2%B7%20EUR%2041%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="newbalance">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/wB4QbGdm/nb-main.jpg" alt="New Balance Fresh Foam — Orange / Grey — main photo" data-caption="New Balance Fresh Foam — Orange / Grey — US 11" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/wB4QbGdm/nb-main.jpg" alt="New Balance Fresh Foam — Orange / Grey — main photo" data-caption="New Balance Fresh Foam — Orange / Grey — US 11 · UK 10.5 · EUR 45" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="New Balance Fresh Foam — Orange / Grey photos"><button class="thumb active" data-src="https://i.postimg.cc/wB4QbGdm/nb-main.jpg" data-alt="New Balance Fresh Foam — Orange / Grey — photo 1"><img src="https://i.postimg.cc/wB4QbGdm/nb-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/Sxf4BHVM/nb-1.jpg" data-alt="New Balance Fresh Foam — Orange / Grey — photo 2"><img src="https://i.postimg.cc/Sxf4BHVM/nb-1.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/jS4TpBvJ/nb-2.jpg" data-alt="New Balance Fresh Foam — Orange / Grey — photo 3"><img src="https://i.postimg.cc/jS4TpBvJ/nb-2.jpg" alt="" /></button><span class="thumb-label">3 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">New Balance • Fresh Foam</p><h3>New Balance Fresh Foam — Orange / Grey</h3></div>
-            <div class="size-badge"><small>Size</small>US 11</div>
+            <div class="size-badge"><small>Size</small>US 11 · UK 10.5 · EUR 45</div>
           </div>
           <p class="desc">Grey mesh upper, orange heel aur coral laces — Fresh Foam comfort ke saath. Bara size, lambi walk aur running ke liye zabardast pair.</p>
           <div class="specs"><span>Color: Grey / Orange</span><span>Fresh Foam sole</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20New%20Balance%20Fresh%20Foam%20%E2%80%94%20Orange%20/%20Grey%20Size%20US%2011%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20New%20Balance%20Fresh%20Foam%20%E2%80%94%20Orange%20/%20Grey%20Size%20US%2011%20%C2%B7%20UK%2010.5%20%C2%B7%20EUR%2045%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="nike">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/jj34kFrf/nike-dark-main.jpg" alt="Nike Mesh — Dark Grey — main photo" data-caption="Nike Mesh — Dark Grey — US 10.5 · EU 44" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/jj34kFrf/nike-dark-main.jpg" alt="Nike Mesh — Dark Grey — main photo" data-caption="Nike Mesh — Dark Grey — US 10.5 · UK 9.5 · EUR 44" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="Nike Mesh — Dark Grey photos"><button class="thumb active" data-src="https://i.postimg.cc/jj34kFrf/nike-dark-main.jpg" data-alt="Nike Mesh — Dark Grey — photo 1"><img src="https://i.postimg.cc/jj34kFrf/nike-dark-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/Njkt3Zb9/nike-dark-1.jpg" data-alt="Nike Mesh — Dark Grey — photo 2"><img src="https://i.postimg.cc/Njkt3Zb9/nike-dark-1.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/zGFNs4pK/nike-dark-2.jpg" data-alt="Nike Mesh — Dark Grey — photo 3"><img src="https://i.postimg.cc/zGFNs4pK/nike-dark-2.jpg" alt="" /></button><span class="thumb-label">3 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Nike</p><h3>Nike Mesh — Dark Grey</h3></div>
-            <div class="size-badge"><small>Size</small>US 10.5 · EU 44</div>
+            <div class="size-badge"><small>Size</small>US 10.5 · UK 9.5 · EUR 44</div>
           </div>
-          <p class="desc">Gehra grey mesh running shoe. Label par size saaf likha hai: US 10.5 / EU 44. Bara size dhoondhne walon ke liye khaas pair.</p>
+          <p class="desc">Gehra grey mesh running shoe. Label par size saaf likha hai: US 10.5 / UK 9.5 / EUR 44. Bara size dhoondhne walon ke liye khaas pair.</p>
           <div class="specs"><span>Color: Dark Grey</span><span>Mesh upper</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Nike%20Mesh%20%E2%80%94%20Dark%20Grey%20Size%20US%2010.5%20%C2%B7%20EU%2044%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Nike%20Mesh%20%E2%80%94%20Dark%20Grey%20Size%20US%2010.5%20%C2%B7%20UK%209.5%20%C2%B7%20EUR%2044%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="ua" data-sold="1">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/g2NVnTrk/ua-olive-main.jpg" alt="Under Armour — Black / Olive — main photo" data-caption="Under Armour — Black / Olive — US 10 · EU 44" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/g2NVnTrk/ua-olive-main.jpg" alt="Under Armour — Black / Olive — main photo" data-caption="Under Armour — Black / Olive — US 10 · UK 9 · EUR 44" tabindex="0" loading="lazy" />
           <span class="tag sold">SOLD</span>
         </div>
         <div class="thumbs" aria-label="Under Armour — Black / Olive photos"><button class="thumb active" data-src="https://i.postimg.cc/g2NVnTrk/ua-olive-main.jpg" data-alt="Under Armour — Black / Olive — photo 1"><img src="https://i.postimg.cc/g2NVnTrk/ua-olive-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/wvZY5zTq/ua-olive-1.jpg" data-alt="Under Armour — Black / Olive — photo 2"><img src="https://i.postimg.cc/wvZY5zTq/ua-olive-1.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/gJQbypkc/ua-olive-2.jpg" data-alt="Under Armour — Black / Olive — photo 3"><img src="https://i.postimg.cc/gJQbypkc/ua-olive-2.jpg" alt="" /></button><span class="thumb-label">3 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Under Armour</p><h3>Under Armour — Black / Olive</h3></div>
-            <div class="size-badge"><small>Size</small>US 10 · EU 44</div>
+            <div class="size-badge"><small>Size</small>US 10 · UK 9 · EUR 44</div>
           </div>
-          <p class="desc">Kaala mesh running shoe, olive/gold touch ke saath. Label par size saaf likha hai: US 10 / EU 44. Mazboot grip, training aur daily use ke liye.</p>
+          <p class="desc">Kaala mesh running shoe, olive/gold touch ke saath. Label par size saaf likha hai: US 10 / UK 9 / EUR 44. Mazboot grip, training aur daily use ke liye.</p>
           <div class="specs"><span>Color: Black / Olive</span><span>Running / Training</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
             <div><b class="sold-price">SOLD</b><span>Ye pair bik gaya hai</span></div>
@@ -802,60 +849,60 @@
 
       <article class="card" data-brand="adidas">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/qRQwX5Zq/yeezy-main.jpg" alt="Adidas Yeezy-Style — Black Knit — main photo" data-caption="Adidas Yeezy-Style — Black Knit — EU 40" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/qRQwX5Zq/yeezy-main.jpg" alt="Adidas Yeezy-Style — Black Knit — main photo" data-caption="Adidas Yeezy-Style — Black Knit — US 7 · UK 6.5 · EUR 40" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="Adidas Yeezy-Style — Black Knit photos"><button class="thumb active" data-src="https://i.postimg.cc/qRQwX5Zq/yeezy-main.jpg" data-alt="Adidas Yeezy-Style — Black Knit — photo 1"><img src="https://i.postimg.cc/qRQwX5Zq/yeezy-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/zB6YwNXb/yeezy-1.jpg" data-alt="Adidas Yeezy-Style — Black Knit — photo 2"><img src="https://i.postimg.cc/zB6YwNXb/yeezy-1.jpg" alt="" /></button><span class="thumb-label">2 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Adidas • Knit Style</p><h3>Adidas Yeezy-Style — Black Knit</h3></div>
-            <div class="size-badge"><small>Size</small>EU 40</div>
+            <div class="size-badge"><small>Size</small>US 7 · UK 6.5 · EUR 40</div>
           </div>
           <p class="desc">Kaala knit (buna hua) upper, andar Adidas ki 3 stripes nazar aati hain. Halka, naram aur trendy style — rozana pehenne ke liye comfortable.</p>
           <div class="specs"><span>Color: Black</span><span>Knit upper</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Adidas%20Yeezy-Style%20%E2%80%94%20Black%20Knit%20Size%20EU%2040%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Adidas%20Yeezy-Style%20%E2%80%94%20Black%20Knit%20Size%20US%207%20%C2%B7%20UK%206.5%20%C2%B7%20EUR%2040%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="karlkani">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/nLSGwPt9/karlkani-main.jpg" alt="Karl Kani — White — main photo" data-caption="Karl Kani — White — EU 40 · US 8.5" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/nLSGwPt9/karlkani-main.jpg" alt="Karl Kani — White — main photo" data-caption="Karl Kani — White — US 8.5 · UK 7.5 · EUR 40" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="Karl Kani — White photos"><button class="thumb active" data-src="https://i.postimg.cc/nLSGwPt9/karlkani-main.jpg" data-alt="Karl Kani — White — photo 1"><img src="https://i.postimg.cc/nLSGwPt9/karlkani-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/g2HpC14n/karlkani-1.jpg" data-alt="Karl Kani — White — photo 2"><img src="https://i.postimg.cc/g2HpC14n/karlkani-1.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/52SJhDpQ/karlkani-2.jpg" data-alt="Karl Kani — White — photo 3"><img src="https://i.postimg.cc/52SJhDpQ/karlkani-2.jpg" alt="" /></button><span class="thumb-label">3 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Karl Kani</p><h3>Karl Kani — White</h3></div>
-            <div class="size-badge"><small>Size</small>EU 40 · US 8.5</div>
+            <div class="size-badge"><small>Size</small>US 8.5 · UK 7.5 · EUR 40</div>
           </div>
-          <p class="desc">Safed sneakers, tongue par rang-biranga Karl Kani style. Label par size saaf likha hai: EUR 40 / US 8.5. Alag aur stylish pair.</p>
-          <div class="specs"><span>Color: White</span><span>Label: EUR 40 / US 8.5</span><span>Condition: Clean / Good</span></div>
+          <p class="desc">Safed sneakers, tongue par rang-biranga Karl Kani style. Label par size saaf likha hai: US 8.5 / UK 7.5 / EUR 40. Alag aur stylish pair.</p>
+          <div class="specs"><span>Color: White</span><span>Label: US 8.5 / UK 7.5 / EUR 40</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Karl%20Kani%20%E2%80%94%20White%20Size%20EU%2040%20%C2%B7%20US%208.5%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Karl%20Kani%20%E2%80%94%20White%20Size%20US%208.5%20%C2%B7%20UK%207.5%20%C2%B7%20EUR%2040%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
 
       <article class="card" data-brand="others">
         <div class="gallery-main">
-          <img class="main-img" src="https://i.postimg.cc/y8vmkbWd/velcro-main.jpg" alt="Velcro Strap — Grey / Black / Blue — main photo" data-caption="Velcro Strap — Grey / Black / Blue — US 10" tabindex="0" loading="lazy" />
+          <img class="main-img" src="https://i.postimg.cc/y8vmkbWd/velcro-main.jpg" alt="Velcro Strap — Grey / Black / Blue — main photo" data-caption="Velcro Strap — Grey / Black / Blue — US 10 · UK 9.5 · EUR 44" tabindex="0" loading="lazy" />
           <span class="tag clean">✓ CLEAN CONDITION</span>
         </div>
         <div class="thumbs" aria-label="Velcro Strap — Grey / Black / Blue photos"><button class="thumb active" data-src="https://i.postimg.cc/y8vmkbWd/velcro-main.jpg" data-alt="Velcro Strap — Grey / Black / Blue — photo 1"><img src="https://i.postimg.cc/y8vmkbWd/velcro-main.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/gJQbypkk/velcro-1.jpg" data-alt="Velcro Strap — Grey / Black / Blue — photo 2"><img src="https://i.postimg.cc/gJQbypkk/velcro-1.jpg" alt="" /></button><button class="thumb" data-src="https://i.postimg.cc/nzgfKxcL/velcro-2.jpg" data-alt="Velcro Strap — Grey / Black / Blue — photo 3"><img src="https://i.postimg.cc/nzgfKxcL/velcro-2.jpg" alt="" /></button><span class="thumb-label">3 photos</span></div>
         <div class="card-body">
           <div class="card-top">
             <div><p class="brandline">Velcro Strap</p><h3>Velcro Strap — Grey / Black / Blue</h3></div>
-            <div class="size-badge"><small>Size</small>US 10</div>
+            <div class="size-badge"><small>Size</small>US 10 · UK 9.5 · EUR 44</div>
           </div>
           <p class="desc">Teen velcro straps wala shoe — laces bandhne ki jhanjhat nahi, foran pehnein. Grey, black aur blue rang, andar neeli lining. Bachon aur baron dono ke liye asaan.</p>
           <div class="specs"><span>Color: Grey / Black / Blue</span><span>3 Velcro straps</span><span>Condition: Clean / Good</span></div>
           <div class="price-row">
-            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair sirf Rs 4,100</span></div>
-            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Velcro%20Strap%20%E2%80%94%20Grey%20/%20Black%20/%20Blue%20Size%20US%2010%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
+            <div><s class="price-was">Rs 3,500</s><b class="price-now">Rs 2,199</b><span class="off-badge">37% OFF</span><span>Free delivery — All Pakistan · 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span></span></div>
+            <a class="order-btn" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Velcro%20Strap%20%E2%80%94%20Grey%20/%20Black%20/%20Blue%20Size%20US%2010%20%C2%B7%20UK%209.5%20%C2%B7%20EUR%2044%20chahiye.%20Price%20aur%20availability%20bata%20dein." target="_blank" rel="noopener">WhatsApp Order</a>
           </div>
         </div>
       </article>
@@ -870,7 +917,7 @@
     <div class="promise">
       <div class="promise-card"><div class="num">01</div><h3>Ganda piece bilkul nahi</h3><p>Har pair ko saaf karke, check karke lagaya jata hai. Phata, ganda ya kharab piece sale ke liye nahi rakha jata.</p></div>
       <div class="promise-card"><div class="num">02</div><h3>Jo photo, wahi joota</h3><p>Website aur WhatsApp par asal pair ki photos hain — side, sole aur size label tak. Koi stock photo nahi.</p></div>
-      <div class="promise-card"><div class="num">03</div><h3>Fixed qeemat, free delivery</h3><p>Zyada tar pairs sirf Rs 2,199 — aur delivery poore Pakistan mein bilkul free. Rs 2,199 wale koi se 2 pair lein to sirf Rs 4,100. Koi chhupa kharcha nahi.</p></div>
+      <div class="promise-card"><div class="num">03</div><h3>Fixed qeemat, free delivery</h3><p>Zyada tar pairs sirf Rs 2,199 — aur delivery poore Pakistan mein bilkul free. Rs 2,199 wale koi se 2 pair lein to <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span> — Rs 400 ki bachat. Koi chhupa kharcha nahi.</p></div>
     </div>
   </section>
 
@@ -882,7 +929,7 @@
       <div class="steps-grid">
         <div class="step"><b>1</b><h3>Joota pasand karein</h3><p>Upar se apna size aur brand dekhein. Photo par tap karke bari photo bhi dekh sakte hain.</p></div>
         <div class="step"><b>2</b><h3>WhatsApp dabayein</h3><p>“WhatsApp Order” button se message khud likha hua khul jayega — bas send kar dein. Ya seedha 0323 1520318 par message karein.</p></div>
-        <div class="step"><b>3</b><h3>Order confirm — bas!</h3><p>Price pehle se fixed hai: zyada tar pairs Rs 2,199, Rs 2,199 wale 2 pair Rs 4,100, delivery free. Har card par usi pair ki price wazeh likhi hai. WhatsApp par sirf size aur address confirm karein, order pakka.</p></div>
+        <div class="step"><b>3</b><h3>Order confirm — bas!</h3><p>Price pehle se fixed hai: zyada tar pairs Rs 2,199, Rs 2,199 wale 2 pair <s>Rs 4,400</s> Rs 4,000 <span class="off-badge">9% OFF</span>, delivery free. Har card par usi pair ki price wazeh likhi hai. WhatsApp par sirf size aur address confirm karein, order pakka.</p></div>
       </div>
       <a class="btn" style="background:#fff;color:#111;margin-top:16px" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20joota%20order%20karna%20hai" target="_blank" rel="noopener">Abhi WhatsApp karein — 0323 1520318</a>
     </div>
@@ -891,7 +938,7 @@
   <!-- FAQ -->
   <section class="section" style="padding-top:6px">
     <div class="section-head"><div><h2>Aksar pooche gaye sawal</h2></div></div>
-    <details><summary>Price kitni hai? Delivery charges?</summary><p>Zyada tar pairs ki price sirf Rs 2,199 hai, aur delivery poore Pakistan mein bilkul FREE hai — koi alag delivery charges nahi. Kuch khaas pairs — Nike Air Force 1 aur Adidas Gazelle — sale par Rs 4,299 ke hain (asal price Rs 7,500); har card par price wazeh likhi hai. Special offer: Rs 2,199 wale koi se bhi 2 pair sirf Rs 4,100 (Rs 298 ki bachat), free delivery ke saath.</p></details>
+    <details><summary>Price kitni hai? Delivery charges?</summary><p>Zyada tar pairs ki price sirf Rs 2,199 hai, aur delivery poore Pakistan mein bilkul FREE hai — koi alag delivery charges nahi. Kuch khaas pairs — Nike Air Force 1 aur Adidas Gazelle — sale par Rs 4,299 ke hain (asal price Rs 7,500); har card par price wazeh likhi hai. Special offer: Rs 2,199 wale koi se bhi 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span> — Rs 400 ki bachat (9% OFF), free delivery ke saath. Ye bundle offer hamesha ke liye hai, sale ke saath khatam nahi hota. Note: Nike Air Force 1 aur Adidas Gazelle Black is bundle mein shamil nahi hain.</p></details>
     <details><summary>Kya ye joote original brands ke hain?</summary><p>Ji, Thrift Kicks par Nike, Adidas, Fila, Under Armour, Hush Puppies, H&amp;M, Asics jaise brands ke thrift joote hote hain. Har pair ki asal photo, sole aur label aap khud dekh sakte hain — Asics aur H&amp;M ke size labels photos mein saaf nazar aate hain.</p></details>
     <details><summary>Mera size nahi mil raha, kya karoon?</summary><p>WhatsApp par apna brand aur size bata dein. Naya stock aata rehta hai — aapka size aane par aapko bata diya jayega.</p></details>
     <details><summary>Order kaise confirm hoga?</summary><p>WhatsApp par pair ki photo ya naam bhejein, price aur availability confirm karein, phir delivery ki details dein. Yahi sabse tez tareeqa hai.</p></details>
@@ -902,7 +949,7 @@
     <div class="final">
       <h2>Apna pair miss na karein</h2>
       <p class="urdu" dir="rtl" lang="ur" style="color:#fff;opacity:1">تھرفٹ ککس — صاف ستھرے برانڈڈ جوتے، بہترین اسٹائل</p>
-      <p>Har pair aik hi hai — zyada tar sirf <strong>Rs 2,199</strong>, free delivery ke saath. Aur Rs 2,199 wale koi se bhi <strong>2 pair sirf Rs 4,100</strong>. Jo pasand aaya hai, abhi WhatsApp kar dein — der ki to koi aur le jayega.</p>
+      <p>Har pair aik hi hai — zyada tar sirf <strong>Rs 2,199</strong>, free delivery ke saath. Aur Rs 2,199 wale koi se bhi <strong>2 pair <s>Rs 4,400</s> sirf Rs 4,000</strong> <span class="off-badge">9% OFF</span>. Jo pasand aaya hai, abhi WhatsApp kar dein — der ki to koi aur le jayega.</p>
       <div class="big-num">Zyada tar pairs sirf Rs 2,199 • Free Delivery</div>
       <div class="big-num" style="margin-top:4px">WhatsApp: 0323 1520318</div>
       <a class="cta" href="https://wa.me/923231520318?text=Assalam-o-Alaikum%2C%20mujhe%20Thrift%20Kicks%20se%20joota%20chahiye" target="_blank" rel="noopener">WhatsApp par rabta karein →</a>
@@ -913,7 +960,7 @@
 </main>
 
 <footer>
-  <strong style="color:var(--ink)">THRIFT KICKS</strong> — Saaf suthray branded joote, behtareen style. Zyada tar pairs Rs 2,199 • Rs 2,199 wale 2 pair sirf Rs 4,100 • Free delivery all over Pakistan.<br>
+  <strong style="color:var(--ink)">THRIFT KICKS</strong> — Saaf suthray branded joote, behtareen style. Zyada tar pairs Rs 2,199 • Rs 2,199 wale 2 pair <s>Rs 4,400</s> sirf Rs 4,000 <span class="off-badge">9% OFF</span> • Free delivery all over Pakistan.<br>
   Order ke liye WhatsApp: <a href="https://wa.me/923231520318" target="_blank" rel="noopener" style="font-weight:800">0323 1520318</a> • Brands: Nike · Adidas · Fila · Under Armour · Hush Puppies · H&amp;M · Asics
 </footer>
 
@@ -942,9 +989,9 @@
       var f = btn.getAttribute('data-filter');
       var visible = 0;
       cards.forEach(function(card){
-        var show = (f === 'all' || card.getAttribute('data-brand') === f);
+        var show = (f === 'all' || card.getAttribute('data-brand') === f || card.hasAttribute('data-offer'));
         card.hidden = !show;
-        if(show && !card.hasAttribute('data-sold')) visible++;
+        if(show && !card.hasAttribute('data-sold') && !card.hasAttribute('data-offer')) visible++;
       });
       countEl.textContent = visible === 1 ? '1 pair available' : visible + ' pairs available';
       emptyEl.hidden = visible !== 0;
